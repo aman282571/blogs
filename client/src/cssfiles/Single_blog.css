@@ -1,0 +1,84 @@
+#blog {
+  padding: 0px 20%;
+  margin-top: 10vh;
+  word-wrap: break-word;
+}
+#blog > #title {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: bolder;
+  color: green;
+}
+#author > span {
+  color: green;
+}
+#blog > #author {
+  line-height: 2rem;
+  font-size: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(179, 176, 176, 0.336);
+}
+#blog > #author > span {
+  font-style: italic;
+}
+#blog > #desc {
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-bottom: 1px solid rgba(179, 176, 176, 0.336);
+  word-wrap: break-word;
+  color: blueviolet;
+}
+
+#change_title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.322);
+  padding: 5px;
+}
+#change_desc {
+  padding: 5px;
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.322);
+  resize: vertical;
+}
+#author > #updateDate {
+  color: black;
+}
+#edit_button,
+#delete_button,
+#save_button,
+#cancel_button {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  background-color: green;
+  color: white;
+  padding: 3px 0.7rem;
+  cursor: pointer;
+  margin: 0.4rem;
+}
+
+#delete_button {
+  background-color: red;
+  margin-right: 3px;
+}
+#cancel_button {
+  background-color: rgb(73, 18, 177);
+}
+#buttons {
+  text-align: right;
+  margin-top: 1rem;
+}
+@media (max-width: 800px) {
+  #blog {
+    padding: 5%;
+  }
+}

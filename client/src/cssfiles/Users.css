@@ -1,0 +1,36 @@
+#users {
+  margin-top: 10vh;
+  display: flex;
+  padding: 0px 40px;
+  flex-wrap: wrap;
+}
+#indi_user {
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem 2rem;
+  margin-left: 60px;
+  margin-top: 3rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.178);
+}
+#user_photo {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 1.5rem;
+  background-color: gray;
+}
+#user_name > #link {
+  width: 4rem;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-decoration: none;
+  color: rgb(4, 8, 196);
+  text-transform: capitalize;
+}
+#user_name {
+  margin-left: 1rem;
+  font-size: 1rem;
+  line-height: 2rem;
+}

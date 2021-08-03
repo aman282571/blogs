@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+img {
+  object-fit: cover;
+}
+#loader,
+#error {
+  line-height: 3rem;
+  font-size: 2rem;
+  color: blue;
+  margin-top: 10vh;
+  text-align: center;
+}
+#error {
+  color: red;
+}
+#mobile {
+  display: none;
+}
+#guest_nav > ul {
+  list-style-type: none;
+  background-color: aquamarine;
+  color: rgb(10, 114, 250);
+  font-weight: bold;
+  cursor: pointer;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+#links {
+  text-decoration: none;
+}
+#guest_nav > ul > li,
+#login_nav > ul > li,
+#logout {
+  display: inline;
+  margin: 5px 0.7rem;
+  line-height: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+#highlight > #links {
+  color: red;
+}
+/* post_navbar css------------------- */
+#login_nav {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  display: flex;
+  background-color: aquamarine;
+  justify-content: space-between;
+}
+#login_nav > ul {
+  list-style-type: none;
+
+  color: rgb(10, 114, 250);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#profileSection {
+  display: flex;
+}
+#logout {
+  margin: 0px 10px;
+}
+#profileSection #profile_pic {
+  height: 1.8rem;
+  width: 1.8rem;
+  border-radius: 0.9rem;
+  margin: 0.1rem;
+  margin-right: 1rem;
+  background-color: gray;
+}
+#error_msg {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  line-height: 2rem;
+  padding: 5px 15px;
+  background-color: red;
+  color: white;
+}
+@media (max-width: 600px) {
+  #login_nav {
+    display: none;
+  }
+  #mobile {
+    display: block;
+  }
+  #mobile {
+    background-color: rgb(240, 255, 240);
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 2;
+  }
+  #mobile > ul {
+    height: 18rem;
+
+    transition-property: height;
+    overflow: hidden;
+    transition-duration: 0.5s;
+  }
+  #mobile > ul > li {
+    text-align: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.226);
+    line-height: 2rem;
+    font-size: 1.1rem;
+    color: green;
+    list-style-type: none;
+  }
+  #mobile #profile_pic {
+    margin-top: 1rem;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2rem;
+    background-color: rgba(128, 128, 128, 0.582);
+  }
+  #mobile > #button {
+    text-align: right;
+  }
+  #mobile > p::after {
+    content: "^";
+    margin: 0.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: brown;
+  }
+  #mobile > .change::after {
+    content: "v";
+    margin: 0.5rem;
+    font-size: 2rem;
+    line-height: 3rem;
+    color: brown;
+  }
+  #mobile > .slide {
+    height: 0px;
+    overflow: hidden;
+  }
+}

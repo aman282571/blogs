@@ -1,0 +1,57 @@
+#user_details {
+  width: 400px;
+  margin: auto;
+  margin-top: 10vh;
+}
+#user_info {
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+  background-color: rgb(97, 154, 240);
+  /* box-shadow: 0px 0px 40px rgba(128, 128, 128, 0.178) inset; */
+}
+#profile_photo {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 4rem;
+  background-color: rgb(218, 218, 218);
+}
+#name {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: white;
+  margin-left: 10px;
+  color: rgb(206, 214, 221);
+  text-transform: capitalize;
+}
+#buttons {
+  text-align: right;
+  margin-top: 5px;
+}
+
+#delete_button {
+  background-color: red;
+}
+#input_file {
+  font-size: 1rem;
+  outline: none;
+  color: white;
+  height: 2rem;
+}
+#personal_blogs {
+  margin-top: 2rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  text-align: center;
+  color: brown;
+  margin-bottom: -10vh;
+}
+@media (max-width: 500px) {
+  #user_details {
+    width: 80%;
+  }
+}
