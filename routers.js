@@ -12,7 +12,6 @@ router.post("/login", (req, res) => {
           const error = "Something went wrong  !!";
           res.status(200).json({ error });
         } else if (result == true) {
-          console.log(user);
           res.status(200).json({ id: user._id, img: user.img });
         } else {
           const error = "Wrong Password !!";
@@ -30,7 +29,7 @@ router.post("/login", (req, res) => {
 });
 router.post("/register", (req, res) => {
   const { name, email, password } = req.body;
-  console.log(req.body);
+
   User.findOne({ name: name }, (err, user) => {
     if (user) {
       bcrypt.compare(password, user.password, (err, result) => {
@@ -44,7 +43,7 @@ router.post("/register", (req, res) => {
       });
     } else if (err) {
       const error = "Something went wrong  !!";
-      console.log(err);
+
       res.status(200).json({ error });
     } else {
       const newuser = new User({
@@ -54,8 +53,6 @@ router.post("/register", (req, res) => {
       });
       bcrypt.hash(password, 10, (err, hashed) => {
         if (err) {
-          console.log(password);
-          console.log(err);
           const error = "Something went wrong  !!";
           res.status(200).json({ error });
         } else {
@@ -80,7 +77,6 @@ router.post("/addblog/:id", (req, res) => {
       const error = "Something went wrong  !!";
       res.status(200).json({ error });
     } else if (result) {
-      console.log(result);
       User.findByIdAndUpdate(
         id,
         { $push: { blogs: result._id } },
@@ -89,7 +85,6 @@ router.post("/addblog/:id", (req, res) => {
             const error = "Something went wrong  !!";
             res.status(200).json({ error });
           } else if (data) {
-            console.log(data);
             result.ownerName = data.name;
             result.save((err, result) => {
               if (err) {
@@ -118,7 +113,6 @@ router.get("/deleteblog/:id", (req, res) => {
           const error = "Something went wrong  !!";
           res.status(200).json({ error });
         } else if (data) {
-          console.log(data);
           User.findOneAndUpdate(
             { blogs: id },
             { $pull: { blogs: id } },
@@ -153,7 +147,6 @@ router.post("/updateblog/:id", (req, res) => {
             const error = "Something went wrong  !!";
             res.status(200).json({ error });
           } else if (data) {
-            console.log(data);
             res.status(200).json({ success: true });
           }
         }
