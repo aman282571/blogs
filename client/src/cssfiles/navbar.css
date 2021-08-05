@@ -107,7 +107,7 @@ img {
     z-index: 2;
   }
   #mobile > ul {
-    height: 18rem;
+    height: 24rem;
 
     transition-property: height;
     overflow: hidden;
@@ -116,8 +116,8 @@ img {
   #mobile > ul > li {
     text-align: center;
     border-bottom: 1px solid rgba(128, 128, 128, 0.226);
-    line-height: 2rem;
-    font-size: 1.1rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
     color: green;
     list-style-type: none;
   }
@@ -134,6 +134,7 @@ img {
   #mobile > p::after {
     content: "^";
     margin: 0.5rem;
+    margin-right: 1rem;
     font-size: 2rem;
     line-height: 3rem;
     color: brown;
@@ -142,6 +143,7 @@ img {
     content: "v";
     margin: 0.5rem;
     font-size: 2rem;
+    margin-right: 1rem;
     line-height: 3rem;
     color: brown;
   }
